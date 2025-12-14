@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 22px;
+}
+
+header {
+    background: #015cbe;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+a:hover {
+  color: #c5aa0f; 
+}
+
+/* Whole Page Layout */
+.page-container {
+    display: flex;
+    min-height: 85vh;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  float: left;
+  overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 22px;  
+      border: none;
+      outline: none;
+      color: black;
+      padding: 10px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn, .dropbtn:focus {
+      background-color: #6bcbd8;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #dabf8e;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+
+/* Navigation */
+.navbar {
+    width: 300px;
+    background-color: #a3ebe7;
+    padding-top: 2rem;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        position: sticky;
+        top: 0;
+    }
+    
+    .navbar li a {
+        display: block;
+        color: #333;
+        padding: 10px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    
+    .navbar a.active {
+        background-color: #015cbe;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .navbar li a:hover:not(.active) {
+        background-color: #f1f1f1;
+    }
+
+/* Main Content */
+.content-area {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 2.5rem;
+    background-color: white;
+    text-align: center;
+}
+
+/* Article Styling */
+article {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    border-left: 5px solid #007BFF;
+}
+
+article h3 {
+    margin-bottom: 0.5rem;
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #4e8dd1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column; 
+    }
+
+    .navbar {
+        width: 100%;
+        border-right: none;
+        position: sticky;
+        top: 0;
+    }
+
+    /* Mobile Navbar Adjustment */
+    .navbar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .navbar li a {
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dropdown-content {
+        overflow-y: scroll;
+        max-width: 30px;
+        max-height: 50vh;
+        }
+
+    .dropdown-content a {
+        display: block;
+        color: black;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .scrolltotop{
+        animation-name: appear;
+        animation-timeline: scroll(y);
+        width: 40px;
+        right: 0;
+        top: 70%;
+    }
+
+    @keyframes appear {
+        0%{
+        opacity: 0;
+        display: none;
+        position: fixed;
+        }
+
+        50%{
+        opacity: 0;
+        display: none;
+        }
+
+        90%{
+        opacity: 1;
+        display: block;
+        }
+
+        100%{
+        opacity: 1;
+        display: block;
+        position: fixed;
+        }
+    }
+
+    img{
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .scrolltotop {
+    animation-name: appear;
+    animation-timeline: scroll(y);
+    width: 40px;
+    right: 0;
+    top: 70%;
+    display: none;
+    }
+}

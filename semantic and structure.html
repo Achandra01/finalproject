@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website Development Resources </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1> HTML SEMANTIC ELEMENTS AND WEBPAGE STRUCTURE </h1>
+    </header>
+
+    <div class="page-container">
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html" class="active" aria-current="page">Home</a></li>
+            
+
+            <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()"> Resources
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="code.html"> Code Editor </a>
+    <a href="semantic and structure.html"> Html Semantic Elements and Webpage Structure </a>
+    <a href="table.html"> Html Table and Forms </a>
+    <a href="responsive.html"> Css Styling and Layout </a>
+    <a href="accessibility.html"> Accessibility Tool </a>
+    <a href="validator.html"> Html and Css Validator Tool </a>
+    <a href="ethical.html"> Ethical and Legal Issues In Web Development </a>
+  </div>
+  </div>
+</ul>
+
+</nav>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+
+
+        <main class="content-area">
+            <h2> HTML Semantic Elements Explained </h2>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YPzFPoqwTmI?si=xOfJBW2acOmDu-XT" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+
+            <p>
+              A brief video with a preview on the difference between non-semantic and semantic elements 
+              and why it is important to use semantic elements
+            </p>
+
+            <article>
+                <h3>Introduction to HTML Semantic Elements </h3>
+
+                <a href="https://www.geeksforgeeks.org/html/html5-semantics/" target="_blank"> HTML5-Semantics </a>
+
+                <p> It contains information about the semantic elements including the code. You could also edit and play inside the code to
+                  know how it works.
+                </p>
+            </article>
+
+            <article>
+                <h3> HTML Webpage Structure </h3>
+
+                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents" 
+                target="_blank"> HTML Content Structure </a>
+
+                <p> This shows how to structure a HTML document webpage/website. </p>
+            </article>
+        </main>
+
+<a href="#"> <img src="arrow.png" alt="" class="scrolltotop"></a>
+
+    </div>
+
+    <footer>
+        <p> Very useful and user-friendly website for learning </p>
+        <a href="https://www.w3schools.com/" target="_blank"> W3Schools </a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website Development Resources </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1> About the author </h1>
+    </header>
+
+    <div class="page-container">
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html" class="active" aria-current="page">Home</a></li>
+            
+
+            <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()"> Resources
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="code.html"> Code Editor </a>
+    <a href="semantic and structure.html"> Html Semantic Elements and Webpage Structure </a>
+    <a href="table.html"> Html Table and Forms </a>
+    <a href="responsive.html"> Css Styling and Layout </a>
+    <a href="accessibility.html"> Accessibility Tool </a>
+    <a href="validator.html"> Html and Css Validator Tool </a>
+    <a href="ethical.html"> Ethical and Legal Issues In Web Development </a>
+  </div>
+  </div>
+</ul>
+
+</nav>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+
+
+        <main class="content-area">
+            <img src="sunflower3.jpg" alt="Avatar" class="avatar">
+
+            <h2> Annabelle Chandra </h2>
+            <p>
+                I took this course because I want to know how website works and things to consider to make it user-friendly.
+            </p>
+            
+            <a href="https://github.com/Achandra01" target="_blank"> Github Profile </a>
+        </main>
+
+        <a href="#"> <img src="arrow.png" alt="" class="scrolltotop"></a>
+
+    </div>
+
+    <footer>
+        <p> Very useful and user-friendly website for learning </p>
+        <a href="https://www.w3schools.com/" target="_blank"> W3Schools </a>
+    </footer>
+
+</body>
+</html>
